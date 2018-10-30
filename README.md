@@ -4,7 +4,7 @@ A Test
 
 ## Motivation
 
-This project uses BookshelfJS and Express to provide some endpoints for database forms
+This project uses Bookshelf Postgres and Express to provide some endpoints for database forms
 
 ## Code style
 
