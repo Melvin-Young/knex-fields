@@ -1,0 +1,41 @@
+{
+  "name": "knex-fields",
+  "version": "1.0.0",
+  "description": "Models and Collections'",
+  "main": "index.js",
+  "scripts": {
+    "start": "node",
+    "start:dev": "nodemon",
+    "test": "(dropdb --if-exists test-spgchallenge && createdb test-spgchallenge) && NODE_ENV=test mocha --exit",
+    "db:create:user": "createuser spgchallenge",
+    "db:create:db": "createdb -O spgchallenge -Eutf8 spgchallenge",
+    "db:drop:db": "dropdb --if-exists spgchallenge",
+    "db:update": "knex migrate:latest",
+    "db:reset": "npm run db:rollback && npm run db:update && npm run db:seed",
+    "db:rollback": "knex migrate:rollback",
+    "db:seed": "knex seed:run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Melvin-Young/knex-fields.git"
+  },
+  "author": "Melvin Young",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Melvin-Young/knex-fields/issues"
+  },
+  "homepage": "https://github.com/Melvin-Young/knex-fields#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "bookshelf": "^0.13.3",
+    "checkit": "^0.6.0",
+    "express": "^4.16.4",
+    "knex": "^0.15.2",
+    "pg": "^7.6.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "supertest": "^3.3.0"
+  }
+}

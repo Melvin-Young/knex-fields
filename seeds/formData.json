@@ -1,0 +1,112 @@
+[
+  {
+    "first_name": "Hickman",
+		"last_name": "Kramer",
+		"dob": "11-03-1967",
+    "email": "hickmankramer@tersanki.com",
+    "emergency_contact": {
+        "first_name": "Bass",
+        "last_name": "Travis",
+        "email": "basstravis@tersanki.com"
+      }
+  },
+  {
+    "first_name": "Gallegos",
+		"last_name": "Daniels",
+		"dob": "01-12-1975",
+    "email": "gallegosdaniels@tersanki.com",
+    "emergency_contact": {
+        "first_name": "Lily",
+        "last_name": "Owens",
+        "email": "lilyowens@tersanki.com"
+      }
+  },
+  {
+    "first_name": "Hicks",
+		"last_name": "Wilcox",
+		"dob": "08-13-1995",
+    "email": "hickswilcox@tersanki.com",
+    "emergency_contact": {
+        "first_name": "Hendricks",
+        "last_name": "Mccall",
+        "email": "hendricksmccall@tersanki.com"
+      }
+  },
+  {
+    "first_name": "Lorena",
+		"last_name": "Adkins",
+		"dob": "09-08-1956",
+    "email": "lorenaadkins@tersanki.com",
+    "emergency_contact": {
+        "first_name": "Cunningham",
+        "last_name": "Turner",
+        "email": "cunninghamturner@tersanki.com"
+      }
+  },
+  {
+    "first_name": "Sparks",
+		"last_name": "Holt",
+		"dob": "05-09-1965",
+    "email": "sparksholt@tersanki.com",
+    "emergency_contact": {
+        "first_name": "Kathie",
+        "last_name": "Ward",
+        "email": "kathieward@tersanki.com"
+      }
+  },
+  {
+    "first_name": "Duncan",
+		"last_name": "Price",
+		"dob": "9-23-1987",
+    "email": "duncanprice@tersanki.com",
+    "emergency_contact": {
+        "first_name": "Young",
+        "last_name": "Browning",
+        "email": "youngbrowning@tersanki.com"
+      }
+  },
+  {
+    "first_name": "Bray",
+		"last_name": "Cherry",
+		"dob": "11-08-1991",
+    "email": "braycherry@tersanki.com",
+    "emergency_contact": {
+        "first_name": "Lowe",
+        "last_name": "Moody",
+        "email": "lowemoody@tersanki.com"
+      }
+  },
+  {
+    "first_name": "Adele",
+		"last_name": "Carey",
+		"dob": "05-29-2002",
+    "email": "adelecarey@tersanki.com",
+    "emergency_contact": {
+        "first_name": "Carol",
+        "last_name": "Long",
+        "email": "carollong@tersanki.com"
+      }
+  },
+  {
+    "first_name": "Audra",
+		"last_name": "Pennington",
+		"dob": "12-09-1999",
+    "email": "audrapennington@tersanki.com",
+    "emergency_contact": {
+        "first_name": "Reilly",
+        "last_name": "Cash",
+        "email": "reillycash@tersanki.com"
+      }
+  },
+  {
+    "first_name": "Patty",
+		"last_name": "Ashley",
+		"dob": "06-22-2001",
+    "email": "pattyashley@tersanki.com",
+    "emergency_contact": {
+        "first_name": "Marina",
+        "last_name": "Oconnor",
+        "email": "marinaoconnor@tersanki.com"
+      }
+  }
+]
