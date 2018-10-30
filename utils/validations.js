@@ -1,11 +1,5 @@
 const Checkit = require('checkit');
 
-const isValidField = new Checkit({
-	type: ['required', 'string'],
-	name: ['required', 'string'],
-	required: 'boolean'
-});
-
 const isValidId = new Checkit({ id: 'integer' });
 
 const isValidForm = new Checkit({
@@ -17,7 +11,6 @@ const isValidForm = new Checkit({
 });
 
 module.exports = {
-	isValidField,
 	isValidId,
 	isValidForm
 }

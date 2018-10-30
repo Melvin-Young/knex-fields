@@ -13,11 +13,6 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res, next) => {
-	const [err] = isValidId.validateSync(req.params);
-	if (err) {
-		err.status = 400;
-		return next(err.message);
-	}
 	getForm(req.params.id)
 		.then((result) => {
 			if (result) {
@@ -32,48 +27,33 @@ router.get('/:id', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-	const [err] = isValidForm.validateSync(req.body);
-	if (err) {
-		err.status = 400;
-		return next(err.message);
-	}
 	addForm(req.body)
 		.then((result) => {
 			res.json({ message: result });
 		})
 		.catch((error) => {
 			error.status = 400;
-			next(error)
+			next(error.message)
 		});
 });
 
 router.put('/:id', (req, res, next) => {
-	const [err] = isValidForm.validateSync(req.body);
-	if (err) {
-		err.status = 400;
-		return next(err.message);
-	}
 	updateForm(req.params.id, req.body)
 		.then((result) => {
 			res.json({ message: result });
 		})
 		.catch((error) => {
 			error.status = 400;
-			next(error)
+			next(error.message)
 		});
 });
 
 router.delete('/:id', (req, res, next) => {
-	const [err] = isValidId.validateSync(req.body.id);
-	if (err) {
-		err.status = 400;
-		return next(err.message);
-	}
 	deleteForm(req.params.id)
 		.then()
 		.catch((error) => {
 			error.status = 400;
-			next(error)
+			next(error.message)
 		});
 });
 

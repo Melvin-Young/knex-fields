@@ -1,9 +1,27 @@
 'use strict'
 const bookshelf = require('../database/bookshelf');
 const _ = require('lodash');
+const Checkit = require('checkit');
+
+const isValidForm = new Checkit({
+  firstName: ['required', 'string'],
+	lastName: ['required', 'string'],
+	"dob": ['required', 'string'],
+	email: ['required', 'email'],
+	"emergencyContact": ['object']
+});
 
 const Form = bookshelf.Model.extend({
 	tableName: 'forms',
+
+	initialize: function() {
+		this.on('saving', this.validateSave);
+	},
+
+	validateSave: function() {
+		return isValidForm.run(this.attributes);
+	},
+
 	parse: function (response) {
 		return _.transform(response, (result, value, key) => {
 			if (value instanceof Object && !(Array.isArray(value) || key === 'dob')) {
