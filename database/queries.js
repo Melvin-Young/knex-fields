@@ -1,3 +1,5 @@
+'use strict';
+
 const Fields = require('../models/fields');
 const Forms = require('../models/forms');
 

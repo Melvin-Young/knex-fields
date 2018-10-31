@@ -1,7 +1,9 @@
-const bookshelf = require('../database/bookshelf')
-const Check = require('checkit');
+'use strict';
 
-const fieldCheck = new Check({
+const bookshelf = require('../database/bookshelf')
+const Checkit = require('checkit');
+
+const fieldCheck = new Checkit({
 	type: ['required', 'string'],
 	name: ['required', 'string'],
 	required: 'boolean'

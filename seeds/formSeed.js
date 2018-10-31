@@ -1,3 +1,5 @@
+'use strict';
+
 const data = require('./formData.json');
 
 exports.seed = function(knex) {

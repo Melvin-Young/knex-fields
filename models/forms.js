@@ -1,4 +1,5 @@
 'use strict'
+
 const bookshelf = require('../database/bookshelf');
 const _ = require('lodash');
 const Checkit = require('checkit');
@@ -30,6 +31,7 @@ const Form = bookshelf.Model.extend({
 			result[_.camelCase(key)] = value;
 		}, {});
 	},
+
 	format: function (attributes) {
 		return _.transform(attributes, (result, value, key) => {
 			if (value instanceof Object && !(Array.isArray(value) || key === 'dob')) {
@@ -40,6 +42,7 @@ const Form = bookshelf.Model.extend({
 	}
 });
 
+// Only handles nesting one layer deep
 function camelCaseHelper(snakeObj) {
 	return _.mapKeys(snakeObj, function (value, key) {
 		return _.camelCase(key);
@@ -50,10 +53,6 @@ function snakeCaseHelper(camelObj) {
 	return _.mapKeys(camelObj, function (value, key) {
 		return _.snakeCase(key);
 	});
-}
-
-function shouldHandleNested(value) {
-	return 
 }
 
 module.exports = Form;
